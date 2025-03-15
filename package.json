@@ -1,0 +1,17 @@
+{
+  "name": "accessibility",
+  "version": "1.0.0",
+  "description": "Accessibility module template.",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass styles/style.scss styles/style.css",
+    "start": "sass --watch scss:css",
+    "sass:compressed": "sass --style compressed scss/style.scss css/style.min.css",
+    "sass:expanded": "sass --style expanded scss/style.scss css/style.css"
+  },
+  "author": "scraciun",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.85.1"
+  }
+}

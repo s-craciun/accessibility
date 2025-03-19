@@ -4,6 +4,396 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accessibility</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header padding--s">
+      <nav class="header__navigation">
+        <img src="assets/Logo.png" alt="Logo" class="header__logo" />
+
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">About Us</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">Contact Us</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">Blog</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">Site Map</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">Eng</a>
+          </li>
+        </ul>
+      </nav>
+
+      <form class="search-box">
+        <input class="input" type="text" placeholder="Search this site" />
+        <button class="search-suffix">
+          <svg class="search-icon">
+            <use href="./assets/custom-sprite.svg#search-icon"></use>
+          </svg>
+        </button>
+      </form>
+    </header>
+    <main class="main">
+      <section class="presentation">
+        <div class="presentation__text-box">
+          <h2 class="presentation__title title title--green">
+            Lorem ipsum dolor sit amet
+          </h2>
+          <h3 class="presentation__subtitle subtitle-m">
+            Lorem ipsum dolor sit amet
+          </h3>
+          <p class="presentation__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+            tincidunt posuere eu risus cursus. Senectus sed maecenas viverra
+            tempus at. Nulla aliquam ac diam amet, sagittis, ut ultricies. Urna
+            hendrerit morbi sed gravida. Nulla aliquam ac diam amet, sagittis,
+            ut ultricies. Urna hendrerit morbi sed gravida. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit.
+          </p>
+          <button class="btn">Buy Now</button>
+        </div>
+        <img src="assets/hero.jpg" alt="Large green leaves" />
+      </section>
+      <section class="about-us padding--m">
+        <div class="about-us__item">
+          <img
+            src="assets/green-plants.jpg"
+            alt="Green plants"
+            class="about-us__pic"
+          />
+
+          <div class="about-us__description">
+            <h4 class="subtitle-s subtitle-s--bold">About Us</h4>
+            <p class="about-us__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+              tincidunt posuere eu risus cursus. Senectus sed maecenas viverra
+              tempus at. Nulla aliquam ac diam amet, sagittis, ut ultricies.
+              Urna hendrerit morbi sed gravida. Nulla aliquam ac diam amet,
+              sagittis, ut ultricies. Urna hendrerit morbi sed gravida. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+              tincidunt posuere eu risus cursus.
+            </p>
+            <a href="#" class="link-btn">Learn more about</a>
+          </div>
+        </div>
+
+        <div class="about-us__item">
+          <img
+            src="assets/green-plants.jpg"
+            alt="Green plants"
+            class="about-us__pic"
+          />
+
+          <div class="about-us__description">
+            <h4 class="subtitle-s subtitle-s--bold">About Us</h4>
+            <p class="about-us__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+              tincidunt posuere eu risus cursus. Senectus sed maecenas viverra
+              tempus at. Nulla aliquam ac diam amet, sagittis, ut ultricies.
+              Urna hendrerit morbi sed gravida. Nulla aliquam ac diam amet,
+              sagittis, ut ultricies. Urna hendrerit morbi sed gravida. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+              tincidunt posuere eu risus cursus.
+            </p>
+
+            <a href="#" class="link-btn">Learn more about</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-us padding--m">
+        <div class="contact-us__lefthand">
+          <h2 class="title">Contact Us</h2>
+          <p class="contact-us__text">
+            Fill up the form and ur Team will get back to you within 24 hours.
+            Happy to see your message!
+          </p>
+          <ul class="contact-us__contacts">
+            <li class="contact-us__contacts-item">
+              <a href="#" class="contact-us__contacts-link"
+                >+380 93 15 32 456</a
+              >
+            </li>
+            <li class="contact-us__contacts-item">
+              <a href="#" class="contact-us__contacts-link"
+                >example@gmail.com</a
+              >
+            </li>
+            <li class="contact-us__contacts-item">
+              <a href="#" class="contact-us__contacts-link"
+                >Pidmurma 5a, Lviv</a
+              >
+            </li>
+          </ul>
+          <ul class="contact-us__socials">
+            <li class="contact-us__socials-item">
+              <a href="#" class="contact-us__socials-link">
+                <svg class="contact-us__socials-icon">
+                  <use href="./assets/custom-sprite.svg#facebook-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="contact-us__socials-item">
+              <a href="#" class="contact-us__socials-link">
+                <svg class="contact-us__socials-icon">
+                  <use href="./assets/custom-sprite.svg#facebook-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="contact-us__socials-item">
+              <a href="#" class="contact-us__socials-link">
+                <svg class="contact-us__socials-icon">
+                  <use href="./assets/custom-sprite.svg#facebook-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-us__righthand">
+          <form action="#" class="form form-column">
+            <div class="contact-us__form-fields">
+              <div class="form-field form-field--column">
+                <label class="required" for="firstname">First Name</label>
+                <input
+                  id="firstname"
+                  type="text"
+                  placeholder="John"
+                  class="input"
+                />
+              </div>
+              <div class="form-field form-field--column">
+                <label class="required" for="lastname">Last Name</label>
+                <input
+                  id="lastname"
+                  type="text"
+                  placeholder="Doe"
+                  class="input"
+                />
+              </div>
+              <div class="form-field form-field--column">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="example@gmail.com"
+                  class="input"
+                />
+              </div>
+              <div class="form-field form-field--column">
+                <label for="phoneNumber">Phone Number</label>
+                <input
+                  id="phoneNumber"
+                  type="text"
+                  placeholder="00 000 00 00"
+                  class="input"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field form-field--row--m">
+                <div class="custom-radio">
+                  <input
+                    id="ui-dev"
+                    name="uiDev"
+                    type="radio"
+                    class="custom-radio__input"
+                  />
+                  <label for="ui-dev" class="custom-radio__label">
+                    <span class="custom-radio__circle">&nbsp;</span>
+                    UI Developer
+                  </label>
+                </div>
+                <div class="custom-radio">
+                  <input
+                    id="ui-ux"
+                    name="uiUx"
+                    type="radio"
+                    class="custom-radio__input"
+                  />
+                  <label for="ui-ux" class="custom-radio__label">
+                    <span class="custom-radio__circle">&nbsp;</span>
+                    UI/UX Designer
+                  </label>
+                </div>
+                <div class="custom-radio">
+                  <input
+                    id="access-expert"
+                    name="accessExpert"
+                    type="radio"
+                    class="custom-radio__input"
+                  />
+                  <label for="access-expert" class="custom-radio__label">
+                    <span class="custom-radio__circle">&nbsp;</span>
+                    Accessibility Expert
+                  </label>
+                </div>
+                <div class="custom-radio">
+                  <input
+                    id="qa"
+                    name="qa"
+                    type="radio"
+                    class="custom-radio__input"
+                  />
+                  <label for="qa" class="custom-radio__label">
+                    <span class="custom-radio__circle">&nbsp;</span>
+                    QA Engineer
+                  </label>
+                </div>
+                <div class="custom-radio">
+                  <input
+                    id="other"
+                    name="other"
+                    type="radio"
+                    class="custom-radio__input"
+                  />
+                  <label for="other" class="custom-radio__label">
+                    <span class="custom-radio__circle">&nbsp;</span>
+                    Other
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-field form-field--column">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                placeholder="Text here..."
+                class="textarea"
+              ></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <div class="custom-checkbox">
+                  <input
+                    id="terms1"
+                    name="terms1"
+                    type="checkbox"
+                    class="custom-checkbox__input"
+                  />
+                  <label for="terms1" class="custom-checkbox__label">
+                    <span class="custom-checkbox__square">&nbsp;</span>
+                    Accept the Terms
+                  </label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="custom-checkbox">
+                  <input
+                    id="terms2"
+                    name="terms2"
+                    type="checkbox"
+                    class="custom-checkbox__input"
+                  />
+                  <label for="terms2" class="custom-checkbox__label">
+                    <span class="custom-checkbox__square">&nbsp;</span>
+                    Accept the Terms 2
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn contact-us__form-btn" type="submit">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer padding--l">
+      <div class="footer__top">
+        <div class="footer__subscription">
+          <h1 class="title footer__subscription-title">PlantMe</h1>
+          <p class="footer__subscription-text">
+            Subscribe and be the first to know about our news and promotions.
+          </p>
+          <form action="#" class="form">
+            <input
+              type="text"
+              class="input input-underline"
+              placeholder="example@gmail.com"
+            />
+            <button class="btn">Subscrbe</button>
+          </form>
+        </div>
+
+        <nav class="footer__navigation">
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">
+                <h3 class="subtitle-s">About Us</h3>
+              </a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">
+                <h3 class="subtitle-s">Contact Us</h3>
+              </a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">
+                <h3 class="subtitle-s">Blog</h3>
+              </a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">
+                <h3 class="subtitle-s">Site Map</h3>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__contacts">
+          <h3 class="subtitle-s">Contacts</h3>
+
+          <ul class="footer__contacts-list">
+            <li class="footer__contacts-item">
+              <a href="#" class="footer__contacts-link">+38 063 072 0121</a>
+            </li>
+            <li class="footer__contacts-item">
+              <a href="#" class="footer__contacts-link">
+                plantme.store@gmail.com
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer__payment-list">
+            <li class="footer__payment-item">
+              <a href="#" class="footer__payment-link">
+                <img src="assets/visa.png" alt="Visa payment type logo" />
+              </a>
+            </li>
+            <li class="footer__payment-item">
+              <a href="#" class="footer__payments-link">
+                <img
+                  src="assets/mastercard.png"
+                  alt="Mastercard payment type logo"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p class="copyright__text">&copy; 2022 PlantMe. All Rights Reserved</p>
+        <nav class="copyright__navigation">
+          <ul class="copyright__menu">
+            <li class="copyright__menu-item">
+              <a href="#" class="copyright__menu-link">Privacy Policy</a>
+            </li>
+            <li class="copyright__menu-item">
+              <a href="#" class="copyright__menu-link">Terms of service</a>
+            </li>
+            <li class="copyright__menu-item">
+              <a href="#" class="copyright__menu-link">Language</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>

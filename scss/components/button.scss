@@ -1,0 +1,28 @@
+.link-btn {
+  font-size: inherit;
+  font-family: inherit;
+
+  &,
+  &:link,
+  &:visited {
+    color: var(--color-white);
+    font-weight: 400;
+
+    &::after {
+      content: "-->";
+      text-decoration: none;
+      margin-left: 3px;
+    }
+  }
+}
+
+.btn {
+  padding: 11px 63px;
+  border: none;
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+  background-color: var(--color-primary-dark);
+
+  font-size: 18px;
+  font-family: inherit;
+}

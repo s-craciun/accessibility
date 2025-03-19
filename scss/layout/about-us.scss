@@ -1,0 +1,31 @@
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+
+  padding: 80px var(--padding-left-right);
+
+  &__item {
+    display: flex;
+    align-self: center;
+    gap: 18px;
+
+    background-color: var(--color-primary-dark);
+    border-radius: var(--border-radius);
+    color: var(--color-white);
+    padding: 24px;
+    padding-bottom: 35px;
+  }
+
+  &__pic {
+    height: 230px;
+    width: 180px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

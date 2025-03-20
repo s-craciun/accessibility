@@ -52,22 +52,37 @@
         margin-bottom: 15px;
       }
     }
+
+    &-link,
+    &-link:link,
+    &-link:visited {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 
   &__payment {
     &-list {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 30px;
 
       list-style: none;
+    }
+
+    &-item {
+      max-width: 50px;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 
   .copyright {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
     padding-top: 24px;
     padding-bottom: 24px;
@@ -77,11 +92,15 @@
 
     &__text {
       font-weight: 400;
+      grid-column-start: 2;
+      grid-column-end: 2;
+      justify-self: center;
     }
 
     &__menu {
       list-style: none;
       display: flex;
+      justify-self: flex-end;
       gap: 20px;
 
       &-link,

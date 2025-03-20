@@ -48,7 +48,14 @@
 
     &-link,
     &-link:link,
-    &-lin:visited {
+    &-link:visited {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 34px;
+      width: 34px;
+
       text-decoration: none;
       color: inherit;
     }

@@ -6,7 +6,8 @@
   "scripts": {
     "sass:watch": "sass scss/style.scss:css/style.css -w",
     "devServer": "browser-sync start --server --files 'css/*.css, *.html'",
-    "start": "npm-run-all --parallel devServer sass:watch"
+    "start": "npm-run-all --parallel sass:watch devServer",
+    "build": "sass scss/style.scss css/style.css --style=compressed"
   },
   "author": "scraciun",
   "license": "ISC",

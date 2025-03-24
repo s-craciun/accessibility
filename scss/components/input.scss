@@ -1,0 +1,150 @@
+@use "../utils/variables.scss";
+
+.input,
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 8px;
+  resize: none;
+
+  border-radius: 3px;
+  border: 1px solid var(--color-primary-dark);
+
+  font-size: inherit;
+  font-family: inherit;
+
+  &-underline {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid var(--color-primary-dark);
+  }
+}
+
+.textarea {
+  height: 104px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-primary-dark);
+  border-radius: var(--border-radius);
+
+  &--bold {
+    border: 2px solid var(--color-primary-dark);
+  }
+
+  input {
+    border: none;
+  }
+
+  .input-icon {
+    width: 32px;
+    height: 32px;
+    fill: var(--color-primary-dark);
+  }
+
+  .input-suffix {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px;
+
+    color: var(--color-white);
+    border: none;
+    background-color: var(--color-primary-dark);
+  }
+
+  .input-prefix {
+    height: 100%;
+    padding-left: 4px;
+  }
+}
+
+.custom-radio {
+  height: 30px;
+  display: flex;
+  align-items: center;
+
+  &,
+  & > * {
+    cursor: pointer;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__circle {
+    position: relative;
+    height: 16px;
+    width: 16px;
+
+    border: 2px solid var(--color-primary-dark);
+    border-radius: 100px;
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      height: 10px;
+      width: 10px;
+
+      border-radius: 100px;
+      background-color: var(--color-primary-dark);
+    }
+  }
+
+  &__input:checked + &__label &__circle::after {
+    display: block;
+  }
+}
+
+.custom-checkbox {
+  height: 30px;
+  display: flex;
+  align-items: center;
+
+  &,
+  & > * {
+    cursor: pointer;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__square {
+    position: relative;
+    display: block;
+    height: 14px;
+    width: 14px;
+
+    border: 2px solid var(--color-primary-dark);
+    border-radius: var(--border-radius);
+  }
+
+  &__input:checked + &__label &__square {
+    background-color: var(--color-primary-dark);
+    background-image: url("../../assets/checked.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+  }
+}

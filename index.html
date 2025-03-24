@@ -3,7 +3,632 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Accessibility dev-plan module project." />
+    <link rel="preload" href="assets/hero.jpg" as="image" type="image/jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Accessibility</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header padding--s">
+      <nav role="navigation" class="header__navigation">
+        <a aria-label="Logo" class="header__logo" href="/">
+          <img
+            src="assets/logo.png"
+            alt="PlantMe logo"
+            class="header__logo-img"
+          />
+        </a>
+
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="#about-us" class="header__menu-link"> About Us </a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#contact-us" class="header__menu-link"> Contact Us </a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#blog" class="header__menu-link"> Blog </a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#site-map" class="header__menu-link"> Site Map </a>
+          </li>
+          <li class="header__menu-item">
+            <select
+              id="select-language"
+              aria-label="Language"
+              class="custom-select"
+            >
+              <option class="custom-select__option" value="eng">Eng</option>
+              <option class="custom-select__option" value="eng">Ro</option>
+              <option class="custom-select__option" value="eng">Ru</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+
+      <form
+        id="search-box"
+        role="form"
+        class="search-box input-box input-box--bold"
+      >
+        <input
+          class="input input--bold"
+          id="searchTerm"
+          name="searchTerm"
+          type="text"
+          placeholder="Search this site"
+        />
+        <button
+          class="input-suffix"
+          type="submit"
+          role="button"
+          aria-label="Search"
+        >
+          <svg class="input-icon">
+            <use href="./assets/custom-sprite.svg#search-icon"></use>
+          </svg>
+        </button>
+      </form>
+    </header>
+    <main class="main">
+      <section id="blog" class="presentation">
+        <div class="presentation__text-box">
+          <h1 class="presentation__title title title--green">
+            Lorem ipsum dolor sit amet
+          </h1>
+          <h2 class="presentation__subtitle subtitle-m">
+            Lorem ipsum dolor sit amet
+          </h2>
+          <p class="presentation__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+            tincidunt posuere eu risus cursus. Senectus sed maecenas viverra
+            tempus at. Nulla aliquam ac diam amet, sagittis, ut ultricies. Urna
+            hendrerit morbi sed gravida. Nulla aliquam ac diam amet, sagittis,
+            ut ultricies. Urna hendrerit morbi sed gravida. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit.
+          </p>
+          <button class="btn" type="button" role="button" aria-label="Buy Now">
+            Buy Now
+          </button>
+        </div>
+        <img
+          src="assets/hero.jpg"
+          alt="Large green leaves"
+          class="presentation__img"
+        />
+      </section>
+
+      <section id="about-us" class="about-us padding--m">
+        <div class="about-us__item">
+          <img
+            src="assets/green-plants.jpg"
+            alt="Green plants"
+            class="about-us__pic"
+          />
+
+          <div class="about-us__description">
+            <h3 class="subtitle-s subtitle-s--bold">About Us</h3>
+            <p class="about-us__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+              tincidunt posuere eu risus cursus. Senectus sed maecenas viverra
+              tempus at. Nulla aliquam ac diam amet, sagittis, ut ultricies.
+              Urna hendrerit morbi sed gravida. Nulla aliquam ac diam amet,
+              sagittis, ut ultricies. Urna hendrerit morbi sed gravida. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+              tincidunt posuere eu risus cursus.
+            </p>
+            <a href="#" target="_blank" class="link-btn">Learn more about</a>
+          </div>
+        </div>
+
+        <div class="about-us__item">
+          <img
+            src="assets/green-plants.jpg"
+            alt="Green plants"
+            class="about-us__pic"
+          />
+
+          <div class="about-us__description">
+            <h3 class="subtitle-s subtitle-s--bold">About Us</h3>
+            <p class="about-us__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+              tincidunt posuere eu risus cursus. Senectus sed maecenas viverra
+              tempus at. Nulla aliquam ac diam amet, sagittis, ut ultricies.
+              Urna hendrerit morbi sed gravida. Nulla aliquam ac diam amet,
+              sagittis, ut ultricies. Urna hendrerit morbi sed gravida. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+              tincidunt posuere eu risus cursus.
+            </p>
+
+            <a href="#" target="_blank" class="link-btn">Learn more about</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-us" class="contact-us padding--m">
+        <div class="contact-us__lefthand">
+          <h2 class="title">Contact Us</h2>
+          <p class="contact-us__text">
+            Fill up the form and ur Team will get back to you within 24 hours.
+            Happy to see your message!
+          </p>
+          <ul class="contact-us__contacts">
+            <li class="contact-us__contacts-item">
+              <a
+                aria-label="Phone number contact"
+                href="tel:+380931532456"
+                class="contact-us__contacts-link"
+                >+380 93 15 32 456</a
+              >
+            </li>
+            <li class="contact-us__contacts-item">
+              <a
+                aria-label="Email address contact"
+                href="mailto:example@gmail.com?subject=Hello%20My%20SL&body=I%20am%20so%20stupud."
+                class="contact-us__contacts-link"
+                >example@gmail.com</a
+              >
+            </li>
+            <li class="contact-us__contacts-item">
+              <a
+                aria-label="Physical location address"
+                href="https://www.google.com/maps/place/Lviv,+Lviv+Oblast,+Ukraine,+79000/@49.8311883,23.4215736,10z/data=!3m1!4b1!4m10!1m2!2m1!1sPidmurma+5a,+Lviv!3m6!1s0x473add7c09109a57:0x4223c517012378e2!8m2!3d49.839683!4d24.029717!15sChFQaWRtdXJtYSA1YSwgTHZpdpIBCGxvY2FsaXR54AEA!16zL20vMGQ3X24?entry=ttu&g_ep=EgoyMDI1MDMxNy4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                class="contact-us__contacts-link"
+                >Pidmurma 5a, Lviv</a
+              >
+            </li>
+          </ul>
+          <ul class="contact-us__socials">
+            <li class="contact-us__socials-item">
+              <a
+                aria-label="Facebook page link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="contact-us__socials-link"
+              >
+                <svg class="contact-us__socials-icon">
+                  <use href="./assets/custom-sprite.svg#facebook-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="contact-us__socials-item">
+              <a
+                aria-label="Facebook page link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="contact-us__socials-link"
+              >
+                <svg class="contact-us__socials-icon">
+                  <use href="./assets/custom-sprite.svg#facebook-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="contact-us__socials-item">
+              <a
+                aria-label="Facebook page link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="contact-us__socials-link"
+              >
+                <svg class="contact-us__socials-icon">
+                  <use href="./assets/custom-sprite.svg#facebook-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-us__righthand">
+          <form
+            id="contact-us-form"
+            role="form"
+            action="#"
+            class="form form-column"
+          >
+            <div class="contact-us__form-fields">
+              <div class="form-field form-field--column">
+                <label class="required" for="firstname">First Name</label>
+                <input
+                  id="firstname"
+                  name="firstName"
+                  type="text"
+                  placeholder="John"
+                  class="input"
+                  required
+                />
+              </div>
+              <div class="form-field form-field--column">
+                <label class="required" for="lastname">Last Name</label>
+                <input
+                  id="lastname"
+                  name="lastName"
+                  type="text"
+                  placeholder="Doe"
+                  class="input"
+                  required
+                />
+              </div>
+              <div class="form-field form-field--column">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="example@gmail.com"
+                  class="input"
+                />
+              </div>
+              <div class="form-field form-field--column">
+                <label id="phone" for="phoneNumber">Phone Number</label>
+                <div class="input-box">
+                  <select
+                    id="countryPhoneCode"
+                    name="countryPhoneCode"
+                    aria-label="Country phone code"
+                    class="custom-select input-prefix input-prefix--divider"
+                  >
+                    <option class="custom-select__option" value="eng">
+                      +380
+                    </option>
+                    <option class="custom-select__option" value="eng">
+                      +373
+                    </option>
+                    <option class="custom-select__option" value="eng">
+                      +lol
+                    </option>
+                  </select>
+                  <input
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    type="tel"
+                    pattern="[0-9]{9}"
+                    aria-labelledby="phone"
+                    placeholder="00 000 00 00"
+                    class="input"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field form-field--row--m">
+                <div
+                  class="custom-radio"
+                  tabindex="0"
+                  role="radio"
+                  aria-checked="false"
+                  aria-labelledby="ui-dev-label"
+                  onclick="toggleRadio('ui-dev')"
+                >
+                  <input
+                    id="ui-dev"
+                    name="speciality"
+                    type="radio"
+                    class="custom-radio__input"
+                  />
+                  <label
+                    id="ui-dev-label"
+                    for="ui-dev"
+                    class="custom-radio__label"
+                  >
+                    <span class="custom-radio__circle">&nbsp;</span>
+                    UI Developer
+                  </label>
+                </div>
+                <div
+                  class="custom-radio"
+                  tabindex="0"
+                  role="radio"
+                  aria-checked="false"
+                  aria-labelledby="ui-ux-label"
+                  onclick="toggleRadio('ui-ux')"
+                >
+                  <input
+                    id="ui-ux"
+                    name="speciality"
+                    type="radio"
+                    class="custom-radio__input"
+                  />
+                  <label
+                    id="ui-ux-label"
+                    for="ui-ux"
+                    class="custom-radio__label"
+                  >
+                    <span class="custom-radio__circle">&nbsp;</span>
+                    UI/UX Designer
+                  </label>
+                </div>
+                <div
+                  class="custom-radio"
+                  tabindex="0"
+                  role="radio"
+                  aria-checked="false"
+                  aria-labelledby="access-expert-label"
+                  onclick="toggleRadio('access-expert')"
+                >
+                  <input
+                    id="access-expert"
+                    name="speciality"
+                    type="radio"
+                    class="custom-radio__input"
+                  />
+                  <label
+                    id="access-expert-label"
+                    for="access-expert"
+                    class="custom-radio__label"
+                  >
+                    <span class="custom-radio__circle">&nbsp;</span>
+                    Accessibility Expert
+                  </label>
+                </div>
+                <div
+                  class="custom-radio"
+                  tabindex="0"
+                  role="radio"
+                  aria-checked="false"
+                  aria-labelledby="qa-label"
+                  onclick="toggleRadio('qa')"
+                >
+                  <input
+                    id="qa"
+                    name="speciality"
+                    type="radio"
+                    class="custom-radio__input"
+                  />
+                  <label id="qa-label" for="qa" class="custom-radio__label">
+                    <span class="custom-radio__circle">&nbsp;</span>
+                    QA Engineer
+                  </label>
+                </div>
+                <div
+                  class="custom-radio"
+                  tabindex="0"
+                  role="radio"
+                  aria-checked="false"
+                  aria-labelledby="other-label"
+                  onclick="toggleRadio('other')"
+                >
+                  <input
+                    id="other"
+                    name="speciality"
+                    type="radio"
+                    class="custom-radio__input"
+                  />
+                  <label
+                    id="other-label"
+                    for="other"
+                    class="custom-radio__label"
+                  >
+                    <span class="custom-radio__circle">&nbsp;</span>
+                    Other
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-field form-field--column">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Text here..."
+                class="textarea"
+              ></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <div
+                  class="custom-checkbox"
+                  id="terms1-box"
+                  role="checkbox"
+                  tabindex="0"
+                  aria-checked="false"
+                  required
+                  aria-labelledby="terms1-label"
+                  onclick="toggleCheckbox('terms1')"
+                >
+                  <input
+                    id="terms1"
+                    name="terms1"
+                    type="checkbox"
+                    class="custom-checkbox__input"
+                    aria-checked="false"
+                  />
+                  <label
+                    id="terms1-label"
+                    for="terms1"
+                    class="custom-checkbox__label"
+                  >
+                    <span class="custom-checkbox__square">&nbsp;</span>
+                    Accept the Terms
+                  </label>
+                </div>
+              </div>
+              <div class="form-field">
+                <div
+                  class="custom-checkbox"
+                  id="terms2-box"
+                  tabindex="0"
+                  role="checkbox"
+                  aria-checked="false"
+                  required
+                  aria-labelledby="terms2-label"
+                  onclick="toggleCheckbox('terms2')"
+                >
+                  <input
+                    id="terms2"
+                    name="terms2"
+                    type="checkbox"
+                    tabindex="0"
+                    class="custom-checkbox__input"
+                    aria-checked="false"
+                  />
+                  <label
+                    id="terms2-label"
+                    for="terms2"
+                    class="custom-checkbox__label"
+                  >
+                    <span class="custom-checkbox__square">&nbsp;</span>
+                    Accept the Terms 2
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="error-message" role="alert" id="error-message">
+              Both checkboxes must be checked before submitting the form.
+            </div>
+
+            <button
+              role="button"
+              aria-label="Send Message"
+              class="btn contact-us__form-btn"
+              type="submit"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer id="site-map" class="footer padding--l">
+      <div class="footer__top">
+        <div class="footer__subscription">
+          <h2 class="title footer__subscription-title">PlantMe</h2>
+          <p class="footer__subscription-text">
+            Subscribe and be the first to know about our news and promotions.
+          </p>
+          <form id="subscrbe-form" role="form" action="#" class="form">
+            <input
+              type="text"
+              id="subscriptionEmail"
+              name="subscriptionEmail"
+              class="input input-underline"
+              placeholder="example@gmail.com"
+              required
+            />
+            <button
+              class="btn"
+              type="submit"
+              role="button"
+              aria-label="Subscribe"
+            >
+              Subscrbe
+            </button>
+          </form>
+        </div>
+
+        <nav class="footer__navigation">
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a href="#about-us" class="footer__menu-link">
+                <h3 class="subtitle-s">About Us</h3>
+              </a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#contact-us" class="footer__menu-link">
+                <h3 class="subtitle-s">Contact Us</h3>
+              </a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#blog" class="footer__menu-link">
+                <h3 class="subtitle-s">Blog</h3>
+              </a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#site-map" class="footer__menu-link">
+                <h3 class="subtitle-s">Site Map</h3>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__contacts">
+          <h3 class="subtitle-s">Contacts</h3>
+
+          <ul class="footer__contacts-list">
+            <li class="footer__contacts-item">
+              <a
+                aria-label="Phone number contact"
+                href="tel:+380630720121"
+                class="footer__contacts-link"
+                >+38 063 072 0121</a
+              >
+            </li>
+            <li class="footer__contacts-item">
+              <a
+                aria-label="Email address contact"
+                href="mailto:plantme.store@gmail.com?subject=Hello%20My%20SL&body=I%20am%20so%20stupud."
+                class="footer__contacts-link"
+              >
+                plantme.store@gmail.com
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer__payment-list">
+            <li class="footer__payment-item">
+              <a
+                aria-label="Visa payment type link"
+                href="https://www.victoriabank.md/carduri/carduri-de-debit/visa-classic"
+                target="_blank"
+                class="footer__payment-link"
+              >
+                <img src="assets/visa.png" alt="Visa payment type logo" />
+              </a>
+            </li>
+            <li class="footer__payment-item">
+              <a
+                aria-label="Mastercard payment type link"
+                href="https://www.mastercard.md/ro-md.html"
+                target="_blank"
+                class="footer__payments-link"
+              >
+                <img
+                  src="assets/mastercard.png"
+                  alt="Mastercard payment type logo"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p class="copyright__text">&copy; 2022 PlantMe. All Rights Reserved</p>
+        <nav class="copyright__navigation">
+          <ul class="copyright__menu">
+            <li class="copyright__menu-item">
+              <a
+                href="views/privacy-policy.html"
+                target="_blank"
+                class="copyright__menu-link"
+                >Privacy Policy</a
+              >
+            </li>
+            <li class="copyright__menu-item">
+              <a
+                href="views/terms-of-service.html"
+                target="_blank"
+                class="copyright__menu-link"
+                >Terms of service</a
+              >
+            </li>
+            <li class="copyright__menu-item">
+              <a
+                href="#select-language"
+                target="_blank"
+                class="copyright__menu-link"
+                >Language</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

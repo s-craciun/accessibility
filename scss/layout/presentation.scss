@@ -1,0 +1,30 @@
+.presentation {
+  padding: 24px var(--padding-left-right);
+  display: flex;
+  align-items: center;
+
+  background-color: var(--color-grey-light-1);
+  border-radius: var(--border-radius);
+
+  &__text-box {
+    width: 50%;
+    margin-right: 18px;
+  }
+
+  &__title {
+    margin-bottom: 36px;
+  }
+
+  &__subtitle {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    margin-bottom: 36px;
+  }
+
+  &__img {
+    width: 50%;
+    height: 100%;
+  }
+}
